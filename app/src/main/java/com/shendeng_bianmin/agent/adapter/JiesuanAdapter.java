@@ -16,6 +16,7 @@ public class JiesuanAdapter extends BaseQuickAdapter<JiesuanModel.DataBean, Base
     public JiesuanAdapter(int layoutResId, @Nullable List<JiesuanModel.DataBean> data) {
         super(layoutResId, data);
 
+
     }
 
     @Override
