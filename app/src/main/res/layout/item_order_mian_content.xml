@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="14dp"
+                android:includeFontPadding="false"
+                android:text="¥500.00"
+                android:textColor="@color/text_red"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="14dp"
+                android:includeFontPadding="false"
+                android:text="x1"
+                android:textColor="@color/text_color_6"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_money"
+                android:layout_toRightOf="@+id/iv_img"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="ZARA新款男鞋白色透气细孔运动鞋ZARA新款男鞋白色透气细孔运动鞋"
+                android:textColor="@color/text_color_3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_taocan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="12dp"
+                android:layout_toRightOf="@+id/iv_img"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="套餐1"
+                android:textColor="@color/text_color_6"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_taocan"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_toRightOf="@+id/iv_img"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="订单备注：不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣 不要麻辣不要烫不要烫不要麻辣不..."
+                android:textColor="@color/text_color_6"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_shouhuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+           >
+
+                <TextView
+                    android:id="@+id/tv_shouhuoren_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="收货人：姓名"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_bt"
+                    android:layout_width="72dp"
+                    android:layout_height="31dp"
+                    android:background="@drawable/order_bt"
+                    android:gravity="center"
+                    android:text="去发货"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayfff5f5f5" />
+</LinearLayout>

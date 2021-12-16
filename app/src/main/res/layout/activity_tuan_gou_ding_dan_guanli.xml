@@ -14,7 +14,7 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <com.shendeng.agent.ui.view.magicindicator.MagicIndicator
+        <com.shendeng_bianmin.agent.ui.view.magicindicator.MagicIndicator
             android:id="@+id/magic_indicator4"
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -24,7 +24,7 @@
 
     </RelativeLayout>
 
-    <com.shendeng.agent.ui.view.CustomViewPager
+    <com.shendeng_bianmin.agent.ui.view.CustomViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:background="#ff000000">
 
-    <com.shendeng.agent.ui.activity.sample.HackyViewPager
+    <com.shendeng_bianmin.agent.ui.activity.sample.HackyViewPager
         android:id="@+id/hackyview_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

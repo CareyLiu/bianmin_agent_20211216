@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <com.shendeng.agent.ui.view.x5.X5WebView
+        <com.shendeng_bianmin.agent.ui.view.x5.X5WebView
             android:id="@+id/x5_webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -36,6 +36,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:id="@+id/ll_title_img"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
@@ -106,7 +107,8 @@
                 android:background="@color/white"
                 android:gravity="center_vertical"
                 android:paddingLeft="14dp"
-                android:paddingRight="14dp">
+                android:paddingRight="14dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="0dp"
@@ -227,7 +229,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="设置运费"
+                    android:text="设置商品价格"
                     android:textColor="@color/text_color_3"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -238,7 +240,81 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:gravity="right"
-                    android:hint="请设置运费"
+                    android:hint="请设置商品价格"
+                    android:textColor="@color/text_color_3"
+                    android:textColorHint="@color/text_color_6"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/sd_push_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bianhao"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="设置商品编号"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_bianhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:hint="请设置商品编号"
+                    android:textColor="@color/text_color_3"
+                    android:textColorHint="@color/text_color_6"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/sd_push_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_kucun"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="设置商品库存"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_kucun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:hint="请设置商品库存"
                     android:textColor="@color/text_color_3"
                     android:textColorHint="@color/text_color_6"
                     android:textSize="15sp" />
@@ -258,7 +334,8 @@
                 android:background="@color/white"
                 android:gravity="center_vertical"
                 android:paddingLeft="14dp"
-                android:paddingRight="14dp">
+                android:paddingRight="14dp"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="0dp"
@@ -290,7 +367,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -382,11 +460,11 @@
             <TextView
                 android:id="@+id/bt_ok"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="96dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="24dp"
                 android:background="@drawable/white_line_radius_8"
                 android:gravity="center"

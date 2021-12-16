@@ -3,10 +3,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.shendeng.agent.dialog.BottomDialogView
+    <com.shendeng_bianmin.agent.dialog.BottomDialogView
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"></com.shendeng.agent.dialog.BottomDialogView>
+        android:layout_marginRight="15dp"></com.shendeng_bianmin.agent.dialog.BottomDialogView>
 </LinearLayout>

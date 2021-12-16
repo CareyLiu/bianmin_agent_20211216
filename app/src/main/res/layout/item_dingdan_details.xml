@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="14dp"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:text="¥500.00"
+            android:textColor="@color/text_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+            android:includeFontPadding="false"
+            android:text="x1"
+            android:textColor="@color/text_color_6"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_money"
+            android:layout_toRightOf="@+id/iv_img"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="ZARA新款男鞋白色透气细孔运动鞋ZARA新款男鞋白色透气细孔运动鞋"
+            android:textColor="@color/text_color_3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_taocan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="套餐1"
+            android:textColor="@color/text_color_6"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_taocan"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/iv_img"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:text="订单备注：不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣不要麻辣不要烫不要麻辣 不要麻辣不要烫不要烫不要麻辣不..."
+            android:textColor="@color/text_color_6"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <View
+        android:background="@color/grayfff5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

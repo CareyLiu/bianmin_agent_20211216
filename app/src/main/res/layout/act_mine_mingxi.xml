@@ -13,29 +13,30 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <com.shendeng.agent.ui.view.SelectTabView
+        <com.shendeng_bianmin.agent.ui.view.SelectTabView
             android:id="@+id/tab_all"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"></com.shendeng.agent.ui.view.SelectTabView>
+            android:layout_weight="1"></com.shendeng_bianmin.agent.ui.view.SelectTabView>
 
-        <com.shendeng.agent.ui.view.SelectTabView
+        <com.shendeng_bianmin.agent.ui.view.SelectTabView
             android:id="@+id/tab_shouru"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"></com.shendeng.agent.ui.view.SelectTabView>
+            android:layout_weight="1"></com.shendeng_bianmin.agent.ui.view.SelectTabView>
 
-        <com.shendeng.agent.ui.view.SelectTabView
+        <com.shendeng_bianmin.agent.ui.view.SelectTabView
             android:id="@+id/tab_zhifu"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"></com.shendeng.agent.ui.view.SelectTabView>
+            android:layout_weight="1"></com.shendeng_bianmin.agent.ui.view.SelectTabView>
 
-        <com.shendeng.agent.ui.view.SelectTabView
+        <com.shendeng_bianmin.agent.ui.view.SelectTabView
+            android:visibility="gone"
             android:id="@+id/tab_tixian"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"></com.shendeng.agent.ui.view.SelectTabView>
+            android:layout_weight="1"></com.shendeng_bianmin.agent.ui.view.SelectTabView>
     </LinearLayout>
 
     <View

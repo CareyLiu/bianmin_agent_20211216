@@ -90,11 +90,11 @@
         android:background="#cccccc" />
 
 
-    <com.shendeng.agent.ui.widget.MenDianViewPager
+    <com.shendeng_bianmin.agent.ui.widget.MenDianViewPager
         android:id="@+id/vp_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.shendeng.agent.ui.widget.MenDianViewPager>
+    </com.shendeng_bianmin.agent.ui.widget.MenDianViewPager>
 
 </LinearLayout>

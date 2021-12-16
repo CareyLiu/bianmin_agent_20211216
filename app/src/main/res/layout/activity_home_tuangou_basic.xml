@@ -23,7 +23,7 @@
             android:layout_gravity="bottom"
             android:background="#e5e5e5" />
 
-        <com.shendeng.agent.ui.view.BottomBar
+        <com.shendeng_bianmin.agent.ui.view.BottomBar
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

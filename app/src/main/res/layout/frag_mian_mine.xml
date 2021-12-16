@@ -63,6 +63,7 @@
                                 android:textSize="17sp" />
 
                             <ImageView
+                                android:visibility="visible"
                                 android:id="@+id/iv_set"
                                 android:layout_width="33dp"
                                 android:layout_height="33dp"
@@ -139,6 +140,7 @@
                                 android:background="@color/line" />
 
                             <LinearLayout
+                                android:visibility="gone"
                                 android:layout_width="match_parent"
                                 android:layout_height="61dp"
                                 android:gravity="center_vertical"
@@ -243,13 +245,13 @@
                                 android:layout_marginLeft="14dp"
                                 android:layout_marginRight="14dp"
                                 android:scaleType="centerCrop"
-                                android:src="@mipmap/mine_icon_qianbao" />
+                                android:src="@mipmap/zhangdan" />
 
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="我的钱包"
+                                android:text="我的账单"
                                 android:textColor="@color/text_color_3"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -406,6 +408,7 @@
 
 
                         <LinearLayout
+
                             android:id="@+id/ll_qiehuan"
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
@@ -415,7 +418,7 @@
                             android:layout_marginBottom="20dp"
                             android:background="@drawable/white_radius_8"
                             android:gravity="center"
-                            android:visibility="visible">
+                            android:visibility="gone">
 
                             <ImageView
                                 android:layout_width="27dp"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_shangpinming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:text="商品1"
+        android:textColor="#383838" />
+
+    <TextView
+        android:textColor="#FC0100"
+        android:id="@+id/tv_xuanze"
+        android:layout_width="67dp"
+        android:layout_height="29dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/red_soke"
+        android:gravity="center"
+        android:text="选择">
+
+    </TextView>
+
+
+    <TextView
+        android:textColor="#FC0100"
+        android:id="@+id/tv_bianji"
+        android:layout_width="67dp"
+        android:layout_height="29dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/tv_xuanze"
+        android:background="@drawable/red_soke"
+        android:gravity="center"
+        android:text="修改名称">
+
+    </TextView>
+</RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shendeng.agent">
+    package="com.shendeng_bianmin.agent">
 
     <supports-screens
         android:anyDensity="true"
@@ -14,14 +14,15 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <application
-        android:name=".app.App"
+        android:name="com.shendeng_bianmin.agent.app.App"
         android:allowBackup="true"
         android:icon="@mipmap/app_logo"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/BaseAppTheme">
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.SplashActivity"
             android:theme="@style/Theme.AppLauncher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,250 +31,250 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.HomeBasicActivity"
+            android:name="com.shendeng_bianmin.agent.ui.HomeBasicActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.WelcomeActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WelcomeActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 登录页面 -->
         <activity
-            android:name=".ui.activity.LoginActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.LoginActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 手机验证 -->
         <activity
-            android:name=".ui.activity.LoginYzmActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.LoginYzmActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 手机验证 -->
         <activity
-            android:name=".ui.activity.PhoneCheckActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.PhoneCheckActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 密码找回 -->
         <activity
-            android:name=".ui.activity.LoginPwdActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.LoginPwdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 到店扫码 -->
         <activity
-            android:name=".ui.activity.OrderSaoyisaoActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderSaoyisaoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 订单详情 -->
         <activity
-            android:name=".ui.activity.OrderDetailsActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderDetailsActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 退款订单详情 -->
         <activity
-            android:name=".ui.activity.OrderTuikuanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderTuikuanActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 发货 -->
         <activity
-            android:name=".ui.activity.OrderFahuoActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderFahuoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 发货扫描单号 -->
         <activity
-            android:name=".ui.activity.OrderFahuoEwmActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderFahuoEwmActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 修改快递费 -->
         <activity
-            android:name=".ui.activity.OrderKuaidiActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderKuaidiActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 订单评价 -->
         <activity
-            android:name=".ui.activity.OrderPingjiaActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.OrderPingjiaActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 订单消息 -->
         <activity
-            android:name=".ui.activity.MsgOrderActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MsgOrderActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 聚易佳公告 -->
         <activity
-            android:name=".ui.activity.MsgGonggaoActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MsgGonggaoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 精选活动 -->
         <activity
-            android:name=".ui.activity.MsgHuodongActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MsgHuodongActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 新功能 -->
         <activity
-            android:name=".ui.activity.MsgNewActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MsgNewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 私聊消息 -->
         <activity
-            android:name=".ui.activity.MsgIMActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MsgIMActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 商品详情 -->
         <activity
-            android:name=".ui.activity.ShangpinDetailsActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinDetailsActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 添加商品 -->
         <activity
-            android:name=".ui.activity.ShangpinAddActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinAddActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 编辑商品 -->
         <activity
-            android:name=".ui.activity.ShangpinEditActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinEditActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 子套餐详情 -->
         <activity
-            android:name=".ui.activity.ShangpinZiAddActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinZiAddActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 商品封面 -->
         <activity
-            android:name=".ui.activity.ShangpinFenmianActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinFenmianActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 商品图文详情 -->
         <activity
-            android:name=".ui.activity.ShangpinImgxiangActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinImgxiangActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 商品图文详情 -->
         <activity
-            android:name=".ui.activity.ShangpinBannerActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ShangpinBannerActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 图片剪裁 -->
         <activity
-            android:name=".ui.activity.headimage.ClipImageActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.headimage.ClipImageActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 设置 -->
         <activity
-            android:name=".ui.activity.SettingActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.SettingActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 我的钱包 -->
         <activity
-            android:name=".ui.activity.WodeQainbaoActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeQainbaoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 绑定支付宝 -->
         <activity
-            android:name=".ui.activity.SetAlipayActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.SetAlipayActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 提现 -->
         <activity
-            android:name=".ui.activity.TixianActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.TixianActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 我的退货地址 -->
         <activity
-            android:name=".ui.activity.WodeTuihuoActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeTuihuoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 新增退货地址 -->
         <activity
-            android:name=".ui.activity.WodeTuihuoAddActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeTuihuoAddActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 我的明细 -->
         <activity
-            android:name=".ui.activity.WodeMingxiActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeMingxiActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 明细详情 -->
         <activity
-            android:name=".ui.activity.WodeMingxiDetailsActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeMingxiDetailsActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 我的结算 -->
         <activity
-            android:name=".ui.activity.WodeJiesuanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.WodeJiesuanActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 关于我们 -->
         <activity
-            android:name=".ui.activity.AboutActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.AboutActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:launchMode="standard"
             android:screenOrientation="portrait"
@@ -281,141 +282,141 @@
 
         <!-- 各种webView页面 -->
         <activity
-            android:name=".ui.activity.DefaultX5WebViewActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.DefaultX5WebViewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 图片显示 -->
         <activity
-            android:name=".ui.activity.sample.ImageShowActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.sample.ImageShowActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name=".ui.activity.sample.ImageShow_OnePicture_urlActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.sample.ImageShow_OnePicture_urlActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <!-- 微信 -->
         <activity
-            android:name=".wxapi.WXEntryActivity"
+            android:name="com.shendeng_bianmin.agent.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:launchMode="singleTop" />
 
         <!-- 微信 -->
         <activity
-            android:name=".wxapi.WXPayEntryActivity"
+            android:name="com.shendeng_bianmin.agent.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:launchMode="singleTop" />
 
         <!--    团购订单详情    -->
         <activity
-            android:name=".ui.activity.tuangou.TuanGouDingDanDetails"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TuanGouDingDanDetails"
             android:screenOrientation="portrait"></activity>
 
         <!--    团购退款详情    -->
         <activity
-            android:name=".ui.activity.tuangou.TuanOrderTuikuanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TuanOrderTuikuanActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    团购套餐管理    -->
         <activity
-            android:name=".ui.activity.tuangou.TaoCanGuanLiActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TaoCanGuanLiActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    买单收款    -->
         <activity
-            android:name=".ui.activity.MaiDanShouKuanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MaiDanShouKuanActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    团购明细    -->
         <activity
-            android:name=".ui.activity.tuangou.TuanMingxiActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TuanMingxiActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    员工管理    -->
         <activity
-            android:name=".ui.activity.yuangong.YuangongActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.yuangong.YuangongActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    员工修改    -->
         <activity
-            android:name=".ui.activity.yuangong.YuangongEditActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.yuangong.YuangongEditActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    员工添加    -->
         <activity
-            android:name=".ui.activity.yuangong.YuangongAddActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.yuangong.YuangongAddActivity"
             android:screenOrientation="portrait"></activity>
 
         <!--    员工添加    -->
         <activity
-            android:name=".ui.activity.yuangong.YuangongCheckActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.yuangong.YuangongCheckActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
 
         <!--    选择页面    -->
         <activity
-            android:name=".ui.activity.ChooseRoleActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.ChooseRoleActivity"
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name=".ui.FeedBackActivity"
+            android:name="com.shendeng_bianmin.agent.ui.FeedBackActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity
-            android:name=".ui.HomeBasicTuanGouActivity"
+            android:name="com.shendeng_bianmin.agent.ui.HomeBasicTuanGouActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.HandAddActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.HandAddActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ui.activity.tuangou.TuanGouSaoMaActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TuanGouSaoMaActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ui.activity.tuangou.TaoCanGuanLi_HomeActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TaoCanGuanLi_HomeActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.AddTaoCanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.AddTaoCanActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ui.activity.tuangou.TuanGouDingDanGuanliActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TuanGouDingDanGuanliActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.MenDianCaiDanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.MenDianCaiDanActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.TianJiaGuiZeActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TianJiaGuiZeActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.TianJiaTaoCanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TianJiaTaoCanActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ui.activity.rongyun_liaotian.ConversationActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.rongyun_liaotian.ConversationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -430,7 +431,7 @@
             </intent-filter>
         </activity> <!-- 会话界面 -->
         <activity
-            android:name=".ui.activity.rongyun_liaotian.ConversationListActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.rongyun_liaotian.ConversationListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -446,7 +447,7 @@
         </activity>
 
         <receiver
-            android:name=".ui.service.SealNotificationReceiver"
+            android:name="com.shendeng_bianmin.agent.ui.service.SealNotificationReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
@@ -456,22 +457,32 @@
         </receiver>
 
         <activity
-            android:name=".ui.activity.MenDianHeiSeActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MenDianHeiSeActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.tuangou.TaoCanDetailsActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.tuangou.TaoCanDetailsActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".ui.activity.MenDianXinXiActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.MenDianXinXiActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ui.activity.TuPianCaiDanActivity"
+            android:name="com.shendeng_bianmin.agent.ui.activity.TuPianCaiDanActivity"
+            android:configChanges="locale|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.TianJiaLeiMuActivity"
+            android:configChanges="locale|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.BianMinDingDanXiangQingActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
