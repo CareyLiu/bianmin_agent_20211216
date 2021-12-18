@@ -546,7 +546,7 @@ public class TianJiaTaoCanActivity extends BaseActivity {
         map.put("code", Urls.code_04179);
         map.put("key", Urls.KEY);
         map.put("token", UserManager.getManager(this).getAppToken());
-        map.put("enter_type", "3");
+        map.put("enter_type", "5");
         map.put("wares_name", taoCanMingCheng);
         map.put("shop_product_title", taoCanJianJie);
         map.put("shop_money_old", taoCanYuanjia);

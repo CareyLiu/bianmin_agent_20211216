@@ -63,6 +63,7 @@ public class Upload {
         private String file_all_url;
         private String file_save;
         private String file_state;
+        public String image_url;
 
         public String getFile_url() {
             return file_url;

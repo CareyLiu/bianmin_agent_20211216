@@ -31,7 +31,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        Bugly.init(getApplicationContext(), "85634cc1f8", false);
+        Bugly.init(getApplicationContext(), "4949afa776", false);
         initRongYun();
     }
 

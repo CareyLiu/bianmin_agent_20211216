@@ -53,7 +53,7 @@ import rx.functions.Action1;
 public class ShangpinDetailsActivity extends BaseActivity {
 
     @BindView(R.id.banner)
-    Banner banner;
+    ImageView banner;
     @BindView(R.id.tv_title_name)
     TextView tv_title_name;
     @BindView(R.id.rv_taocan)
@@ -427,29 +427,31 @@ public class ShangpinDetailsActivity extends BaseActivity {
     }
 
     private void initBanner() {//初始化banner
-        List<ShangpinDetailsModel.DataBean.ImgListBean> img_list = dataBean.getImg_list();
-        if (img_list != null && img_list.size() > 0) {
-            iv_nopic.setVisibility(View.GONE);
-            MyImageLoader mMyImageLoader = new MyImageLoader();
-            banner.setImageLoader(mMyImageLoader);
-            //  initMagicIndicator1(tagList);
-            ArrayList<String> imagePath = new ArrayList<String>();
-            for (int i = 0; i < img_list.size(); i++) {
-                imagePath.add(img_list.get(i).getImg_url());
-            }
-            banner.setImages(imagePath);
-            //设置图片加载地址
+//        List<ShangpinDetailsModel.DataBean.ImgListBean> img_list = dataBean.getImg_list();
+//        if (img_list != null && img_list.size() > 0) {
+//            iv_nopic.setVisibility(View.GONE);
+//            MyImageLoader mMyImageLoader = new MyImageLoader();
+//            banner.setImageLoader(mMyImageLoader);
+//            //  initMagicIndicator1(tagList);
+//            ArrayList<String> imagePath = new ArrayList<String>();
+//            for (int i = 0; i < img_list.size(); i++) {
+//                imagePath.add(img_list.get(i).getImg_url());
+//            }
+//            banner.setImages(imagePath);
+//            //设置图片加载地址
+//
+//            banner.setOnBannerListener(new OnBannerListener() {
+//                @Override
+//                public void OnBannerClick(int position) {
+//                    ImageShowActivity.actionStart(ShangpinDetailsActivity.this, imagePath);
+//                }
+//            });
+//            banner.start();
+//        } else {
+//            iv_nopic.setVisibility(View.VISIBLE);
+//        }
+        Glide.with(this).load(dataBean.getWares_photo_url()).into(banner);
 
-            banner.setOnBannerListener(new OnBannerListener() {
-                @Override
-                public void OnBannerClick(int position) {
-                    ImageShowActivity.actionStart(ShangpinDetailsActivity.this, imagePath);
-                }
-            });
-            banner.start();
-        } else {
-            iv_nopic.setVisibility(View.VISIBLE);
-        }
     }
 
     /**

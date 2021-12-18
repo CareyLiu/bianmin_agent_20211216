@@ -16,6 +16,7 @@ public class Urls {
     public static String UPLOAD = WORKER + "upload/";//卖家端上传
     public static String LOGIN = WORKER + "login";//卖家端登录接口
     public static String MSG = SERVER_URL + "msg";//发送短信验证接口
+    public static String USER_UPLOAD = USER+"uploads";
 
     public final static String code_00001 = "00001";//发送验证码
     public final static String code_04310 = "04310";//登录接口
