@@ -3,16 +3,16 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         debug {
-            keyAlias 'release'
-            keyPassword 'sdkj001'
-            storeFile file('C:/keystore/shangjiaduan.jks')
-            storePassword 'sdkj001'
+            keyAlias 'key0'
+            keyPassword 'bianmin123'
+            storeFile file('C:/keystore/bianmin.jks')
+            storePassword 'bianmin123'
         }
         release {
-            keyAlias 'release'
-            keyPassword 'sdkj001'
-            storeFile file('C:/keystore/shangjiaduan.jks')
-            storePassword 'sdkj001'
+            keyAlias 'key0'
+            keyPassword 'bianmin123'
+            storeFile file('C:/keystore/bianmin.jks')
+            storePassword 'bianmin123'
         }
     }
 
@@ -24,8 +24,8 @@ android {
         applicationId "com.shendeng.agent"
         minSdkVersion 18
         targetSdkVersion 29
-        versionCode 5
-        versionName "1.4"
+        versionCode 2
+        versionName "1.1"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

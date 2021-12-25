@@ -70,7 +70,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.functions.Action1;
 
-public class ShangpinFenmianActivity extends BaseActivity   implements TakePhoto.TakeResultListener, InvokeListener {
+public class ShangpinFenmianActivity extends BaseActivity implements TakePhoto.TakeResultListener, InvokeListener {
 
     @BindView(R.id.iv_add)
     ImageView iv_add;
@@ -93,6 +93,7 @@ public class ShangpinFenmianActivity extends BaseActivity   implements TakePhoto
     private TakePhoto takePhoto;
     private ShangpinDetailsModel.DataBean detailsModel;
     private ShangpinDetailsModel1.DataBean detailsModel1;
+
     @Override
     public int getContentViewResId() {
         return R.layout.act_shangpin_fengmian;
@@ -117,6 +118,8 @@ public class ShangpinFenmianActivity extends BaseActivity   implements TakePhoto
         getTakePhoto().onCreate(savedInstanceState);
         ButterKnife.bind(this);
         init();
+
+
     }
 
     private void init() {
@@ -558,7 +561,7 @@ public class ShangpinFenmianActivity extends BaseActivity   implements TakePhoto
         map.put("token", UserManager.getManager(this).getAppToken());
         map.put("wares_photo_url", str);
         map.put("wares_id", wares_id);
-        map.put("enter_type","5");
+        map.put("enter_type", "5");
 
         Gson gson = new Gson();
         OkGo.<AppResponse<ShangpinDetailsModel.DataBean>>post(Urls.WORKER)
@@ -570,13 +573,16 @@ public class ShangpinFenmianActivity extends BaseActivity   implements TakePhoto
                         //detailsModel = response.body().data.get(0);
                         //ShangpinEditActivity.actionStart(mContext, detailsModel);
                         Glide.with(mContext).load(str).into(iv_main);
-                        UIHelper.ToastMessage(mContext,"上传成功");
+                        UIHelper.ToastMessage(mContext, "上传成功");
                         finish();
                     }
 
                     @Override
                     public void onFinish() {
                         super.onFinish();
+                        for (int i = 0; i < 100; i++) {
+                            System.out.println("");
+                        }
                         dismissProgressDialog();
                     }
 

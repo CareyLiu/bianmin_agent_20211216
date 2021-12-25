@@ -137,6 +137,13 @@ public class ShangpinDetailsActivity extends BaseActivity {
         init();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //请求网络 获得详情
+        getNet();
+    }
+
     private void init() {
         wares_id = getIntent().getStringExtra("wares_id");
         initAdapter();
