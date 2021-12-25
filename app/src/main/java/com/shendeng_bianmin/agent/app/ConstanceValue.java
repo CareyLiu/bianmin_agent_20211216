@@ -22,5 +22,5 @@ public interface ConstanceValue {
 
     int MSG_RONGYUN_REVICE = 0x10011;//接收聊天消息
     int MSG_TIANJIALEIMU = 0x10012;//接收商品类目
-    int MSG_LEIMU_ID = 0x10013;//类目id
+    int MSG_LEIMU_ID = 0x10013;//图片
 }

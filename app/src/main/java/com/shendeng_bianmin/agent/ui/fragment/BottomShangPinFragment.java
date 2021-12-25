@@ -232,7 +232,7 @@ public class BottomShangPinFragment extends BaseFragment {
     private void selectPaixu1() {
         iv_right_select.setImageResource(R.mipmap.dianpu_jiage_weixuanze);
         selectJiaShang = false;
-        tv_paixu_time.setTextColor(Y.getColor(R.color.text_red));
+        tv_paixu_time.setTextColor(Y.getColor(R.color.waimai_main_color));
         tv_paixu_xiaoliang.setTextColor(Y.getColor(R.color.text_color_9));
         if (selectTimeShang) {
             screening_type = "2";
@@ -250,7 +250,7 @@ public class BottomShangPinFragment extends BaseFragment {
         iv_left_select.setImageResource(R.mipmap.dianpu_jiage_weixuanze);
         selectTimeShang = false;
         tv_paixu_time.setTextColor(Y.getColor(R.color.text_color_9));
-        tv_paixu_xiaoliang.setTextColor(Y.getColor(R.color.text_red));
+        tv_paixu_xiaoliang.setTextColor(Y.getColor(R.color.waimai_main_color));
         if (selectJiaShang) {
             screening_type = "4";
             iv_right_select.setImageResource(R.mipmap.dianpu_jiage_jiangxu);
@@ -269,10 +269,10 @@ public class BottomShangPinFragment extends BaseFragment {
         title_yixiajia.setTextColor(Y.getColor(R.color.text_color_9));
         switch (wares_state) {
             case "1":
-                title_chushou.setTextColor(Y.getColor(R.color.text_red));
+                title_chushou.setTextColor(Y.getColor(R.color.waimai_main_color));
                 break;
             case "2":
-                title_yixiajia.setTextColor(Y.getColor(R.color.text_red));
+                title_yixiajia.setTextColor(Y.getColor(R.color.waimai_main_color));
                 break;
         }
 

@@ -367,8 +367,16 @@ public class ShangpinFenmianActivity extends BaseActivity implements TakePhoto.T
                     @Override
                     public void onSuccess(final Response<AppResponse<Upload1.DataBean>> response) {
                         // TODO: 2021-12-16 后台加商品封面，修改code
-                        addShangpin(response.body().data.get(0).getImg_url());
-
+                        String img_url = response.body().data.get(0).getImg_url();
+                        if (!TextUtils.isEmpty(wares_id)){
+                            addShangpin(img_url);
+                        }else {
+                            Notice notice = new Notice();
+                            notice.type = ConstanceValue.MSG_LEIMU_ID;
+                            notice.content = img_url;
+                            sendRx(notice);
+                            finish();
+                        }
                     }
 
                     @Override

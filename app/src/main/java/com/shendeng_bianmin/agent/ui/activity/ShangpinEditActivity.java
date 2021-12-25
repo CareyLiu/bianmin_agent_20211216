@@ -311,7 +311,7 @@ public class ShangpinEditActivity extends BaseActivity {
         ed_title_name.setText(detailsModel.getShop_product_title());
         tv_leimu.setText(detailsModel.getItem_name());
         tv_chandi.setText(detailsModel.getPlace_name());
-      //  tv_yunfei.setText(detailsModel.getWares_money_go());
+        //  tv_yunfei.setText(detailsModel.getWares_money_go());
 
         String is_installable = detailsModel.getIs_installable();
 
@@ -585,7 +585,7 @@ public class ShangpinEditActivity extends BaseActivity {
                 clickShangPinBianHao();
                 break;
             case R.id.ll_kucun:
-
+                clickShangPinKuCun();
                 break;
         }
     }
@@ -603,7 +603,7 @@ public class ShangpinEditActivity extends BaseActivity {
                 if (TextUtils.isEmpty(dialog.getTextContent())) {
                     Y.t("请输入商品编号");
                 } else {
-                    ed_title_name.setText(dialog.getTextContent());
+                    tvBianhao.setText(dialog.getTextContent());
                     dialog.dismiss();
                     addShangpin(type_shangpin_bianhao);
                 }
@@ -617,7 +617,7 @@ public class ShangpinEditActivity extends BaseActivity {
         dialog.setDismissAfterClick(false);
         dialog.setTextInput(InputType.TYPE_CLASS_TEXT);
         dialog.setTextTitle("请输入商品编号");
-        dialog.setTextContent(ed_title_name.getText().toString());
+        dialog.setTextContent(tvBianhao.getText().toString());
         dialog.show();
     }
 
@@ -633,7 +633,7 @@ public class ShangpinEditActivity extends BaseActivity {
                 if (TextUtils.isEmpty(dialog.getTextContent())) {
                     Y.t("请输入商品库存");
                 } else {
-                    ed_title_name.setText(dialog.getTextContent());
+                    tvKucun.setText(dialog.getTextContent());
                     dialog.dismiss();
                     addShangpin(type_shangpin_kucun);
                 }
@@ -647,7 +647,7 @@ public class ShangpinEditActivity extends BaseActivity {
         dialog.setDismissAfterClick(false);
         dialog.setTextInput(InputType.TYPE_CLASS_TEXT);
         dialog.setTextTitle("请输入商品库存");
-        dialog.setTextContent(ed_title_name.getText().toString());
+        dialog.setTextContent(tvKucun.getText().toString());
         dialog.show();
     }
 
@@ -815,7 +815,7 @@ public class ShangpinEditActivity extends BaseActivity {
             @Override
             public void onClickConfirm(View v, InputDialog dialog) {
                 if (TextUtils.isEmpty(dialog.getTextContent())) {
-                    Y.t("请设置运费");
+                    Y.t("请设置商品价格");
                 } else {
                     linshiYunfei = tv_yunfei.getText().toString();
                     tv_yunfei.setText(dialog.getTextContent());
@@ -831,7 +831,7 @@ public class ShangpinEditActivity extends BaseActivity {
         });
         dialog.setDismissAfterClick(false);
         dialog.setTextInput(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-        dialog.setTextTitle("请设置运费");
+        dialog.setTextTitle("请设置商品价格");
         dialog.setTextContent(tv_yunfei.getText().toString());
         dialog.show();
     }

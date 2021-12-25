@@ -62,15 +62,15 @@
         <TextView
             android:id="@+id/bt_chongxin"
             android:layout_width="match_parent"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
             android:layout_height="46dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="46dp"
             android:background="@drawable/white_line_radius_8"
             android:gravity="center"
             android:text="重新上传"
-            android:textColor="@color/text_red"
+            android:textColor="@color/waimai_main_color"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>

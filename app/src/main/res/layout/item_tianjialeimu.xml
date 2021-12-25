@@ -14,7 +14,6 @@
         android:textColor="#383838" />
 
     <TextView
-        android:textColor="#FC0100"
         android:id="@+id/tv_xuanze"
         android:layout_width="67dp"
         android:layout_height="29dp"
@@ -23,13 +22,13 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/red_soke"
         android:gravity="center"
-        android:text="选择">
+        android:text="选择"
+        android:textColor="@color/waimai_main_color">
 
     </TextView>
 
 
     <TextView
-        android:textColor="#FC0100"
         android:id="@+id/tv_bianji"
         android:layout_width="67dp"
         android:layout_height="29dp"
@@ -38,7 +37,8 @@
         android:layout_toLeftOf="@+id/tv_xuanze"
         android:background="@drawable/red_soke"
         android:gravity="center"
-        android:text="修改名称">
+        android:text="修改名称"
+        android:textColor="@color/waimai_main_color">
 
     </TextView>
 </RelativeLayout>

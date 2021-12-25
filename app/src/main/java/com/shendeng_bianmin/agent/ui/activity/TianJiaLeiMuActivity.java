@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -44,7 +45,7 @@ import butterknife.ButterKnife;
 
 public class TianJiaLeiMuActivity extends BaseActivity {
     @BindView(R.id.iv_back)
-    ImageView ivBack;
+    RelativeLayout ivBack;
     @BindView(R.id.rlv_leimu_list)
     RecyclerView rlvLeimuList;
     @BindView(R.id.tv_bianji)
@@ -102,6 +103,13 @@ public class TianJiaLeiMuActivity extends BaseActivity {
                     }
 
                 }
+            }
+        });
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -188,18 +196,11 @@ public class TianJiaLeiMuActivity extends BaseActivity {
                                         if (tianJiaLeiMuModel3.bianJiFlag) {
                                             Notice notice = new Notice();
                                             notice.type = ConstanceValue.MSG_TIANJIALEIMU;
-                                            notice.content = tianJiaLeiMuModel3.item_name;
-                                            sendRx(notice);
-
-                                            Notice notice1 = new Notice();
-                                            notice1.type = ConstanceValue.MSG_LEIMU_ID;
-                                            notice1.content = tianJiaLeiMuModel3.item_id;
+                                            notice.content = tianJiaLeiMuModel3;
                                             sendRx(notice);
                                             finish();
-                                        } else {
+                                        } else {//这里走删除接口
                                             shanChuLeiBie(tianJiaLeiMuModel3.item_id);
-                                            //这里走删除接口
-
                                         }
 
                                         break;

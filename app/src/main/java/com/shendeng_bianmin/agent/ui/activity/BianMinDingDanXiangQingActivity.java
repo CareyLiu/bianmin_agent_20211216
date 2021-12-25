@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -91,42 +92,34 @@ public class BianMinDingDanXiangQingActivity extends BaseActivity {
                 .execute(new JsonCallback<AppResponse<OrderDetailsModel1.DataBean>>() {
                     @Override
                     public void onSuccess(Response<AppResponse<OrderDetailsModel1.DataBean>> response) {
-
                         dataBean = response.body().data.get(0);
-
 
                         mDatas = dataBean.getWares_list();
                         adapter = new OrderDetailsAdapter(R.layout.item_dingdan_details, mDatas);
                         rvContent.setLayoutManager(new LinearLayoutManager(mContext));
                         rvContent.setAdapter(adapter);
 
-
-                       // Glide.with(BianMinDingDanXiangQingActivity.this).load(dataBean.getIndex_photo_url()).into(iv_img);
-
                         tvPayType.setText(dataBean.getCreate_time());
                         tvName.setText(dataBean.getReceiver_name());
                         tvPhone.setText(dataBean.getReceiver_phone());
-
                         tvAdress.setText(dataBean.getUser_addr_all());
 
-                        tvBeizhu.setText("订单备注：" + dataBean.getShop_form_text());
-                        // tv_youhui.setText("优惠券：");
+                        if (TextUtils.isEmpty(dataBean.getShop_form_text())){
+                            tvBeizhu.setText("订单备注：" + "暂无");
+                        }else {
+                            tvBeizhu.setText("订单备注：" + dataBean.getShop_form_text());
+                        }
 
                         tvBianhao.setText("订单编号：" + dataBean.getForm_no());
                         tvPayType.setText("支付方式：" + dataBean.getPay_name());
-                        // tv_yunfei.setText("运费：" + dataBean.getForm_money_go());
                         tvPayTime.setText("交易时间：" + dataBean.getCreate_time());
-
-//                        tv_money.setText("¥ " + dataBean.getPay_money());
-//                        tv_taocan.setText(dataBean.getProduct_title() + "        X" + dataBean.getPay_count());
-//                        tv_mai_name.setText("买家昵称：" + dataBean.getUser_name());
+                        tvMaiName.setText("买家昵称：" + dataBean.getUser_name());
                     }
 
                     @Override
                     public void onFinish() {
                         super.onFinish();
                         dismissProgressDialog();
-                        //smartRefreshLayout.finishRefresh();
                     }
 
                     @Override

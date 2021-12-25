@@ -429,32 +429,32 @@
                         android:scaleType="centerCrop"
                         android:src="@mipmap/sd_push_grey" />
                 </LinearLayout>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/ll_fengmian"
-                    android:layout_width="match_parent"
-                    android:layout_height="46dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/white"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="14dp"
-                    android:paddingRight="14dp">
+            <LinearLayout
+                android:id="@+id/ll_fengmian"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="商品封面图"
-                        android:textColor="@color/text_color_3"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="商品封面图"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/sd_push_grey" />
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/sd_push_grey" />
             </LinearLayout>
 
             <TextView

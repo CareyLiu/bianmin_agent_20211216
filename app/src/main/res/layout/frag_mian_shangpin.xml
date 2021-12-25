@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="出售中"
-                android:textColor="@color/text_red"
+                android:textColor="@color/waimai_main_color"
                 android:textStyle="bold" />
 
             <TextView
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="4dp"
                     android:text="添加时间"
-                    android:textColor="@color/text_red"
+                    android:textColor="@color/waimai_main_color"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -173,8 +173,8 @@
                 android:visibility="visible">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
                     android:scaleType="centerCrop"
                     android:src="@mipmap/shop_pic_none" />
 
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="请添加"
-                        android:textColor="@color/text_red"
+                        android:textColor="@color/waimai_main_color"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -207,5 +207,5 @@
         android:layout_gravity="bottom|right"
         android:layout_marginRight="18dp"
         android:layout_marginBottom="18dp"
-        android:src="@mipmap/product_tianjiasahngpin"></ImageView>
+        android:src="@mipmap/tianjia"></ImageView>
 </FrameLayout>

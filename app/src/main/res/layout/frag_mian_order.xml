@@ -168,8 +168,8 @@
             android:visibility="visible">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/gouwuche_empty" />
 

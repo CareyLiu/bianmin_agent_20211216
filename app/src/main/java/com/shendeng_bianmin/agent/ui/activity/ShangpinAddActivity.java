@@ -30,6 +30,7 @@ import com.shendeng_bianmin.agent.dialog.InputDialog;
 import com.shendeng_bianmin.agent.model.ChandiModel;
 import com.shendeng_bianmin.agent.model.LeimuModel;
 import com.shendeng_bianmin.agent.model.ShangpinDetailsModel;
+import com.shendeng_bianmin.agent.model.TianJiaLeiMuModel;
 import com.shendeng_bianmin.agent.util.Urls;
 import com.shendeng_bianmin.agent.util.Y;
 
@@ -80,6 +81,8 @@ public class ShangpinAddActivity extends BaseActivity {
     TextView tvKucun;
     @BindView(R.id.ll_kucun)
     LinearLayout llKucun;
+    @BindView(R.id.ll_fengmian)
+    LinearLayout ll_fengmian;
 
     private List<ChandiModel.DataBean> chandiModels;
     private List<LeimuModel.DataBean> leimuModels;
@@ -99,9 +102,12 @@ public class ShangpinAddActivity extends BaseActivity {
     private String wares_name;
     private String wares_money_go;
     private String is_installable;//是否安装 1.安装 2.不安装
+    private String fengmianUrl;
+    private String fengmian_wares_id;
     private String install_money;
     private ShangpinDetailsModel.DataBean detailsModel;
     private InputDialog dialog;
+    private TianJiaLeiMuModel selectLeimu;
 
     @Override
     public int getContentViewResId() {
@@ -135,20 +141,25 @@ public class ShangpinAddActivity extends BaseActivity {
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
         init();
+        initHuidiao();
+    }
 
-
+    private void initHuidiao() {
         _subscriptions.add(toObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<Notice>() {
             @Override
             public void call(Notice notice) {
                 if (notice.type == ConstanceValue.MSG_TIANJIALEIMU) {
-                    tv_leimu.setText((String) notice.content);
-                }else if (notice.type==ConstanceValue.MSG_LEIMU_ID){
-                    item_id_one = (String) notice.content;
+                    selectLeimu = (TianJiaLeiMuModel) notice.content;
+                    item_id_one = selectLeimu.item_id;
+                    item_id_one_name = selectLeimu.item_name;
+                    tv_leimu.setText(selectLeimu.item_name);
+                } else if (notice.type == ConstanceValue.MSG_LEIMU_ID) {
+                    fengmianUrl = (String) notice.content;
                 }
             }
         }));
-
     }
+
 
     private void init() {
         enter_type = "5";
@@ -341,7 +352,7 @@ public class ShangpinAddActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_leimu, R.id.iv_swich, R.id.ll_chandi, R.id.bt_ok, R.id.ll_anzhuangfei, R.id.ll_yunfei, R.id.ed_title_name, R.id.tv_bianhao, R.id.tv_kucun})
+    @OnClick({R.id.ll_fengmian, R.id.ll_leimu, R.id.iv_swich, R.id.ll_chandi, R.id.bt_ok, R.id.ll_anzhuangfei, R.id.ll_yunfei, R.id.ed_title_name, R.id.tv_bianhao, R.id.tv_kucun})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_leimu:
@@ -372,7 +383,20 @@ public class ShangpinAddActivity extends BaseActivity {
             case R.id.tv_kucun:
                 clickKuCun();
                 break;
+            case R.id.ll_fengmian:
+                clickFengmian();
+                break;
         }
+    }
+
+    private void clickFengmian() {
+        Intent intent = new Intent();
+        intent.setClass(this, ShangpinFenmianActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("wares_id", fengmian_wares_id);
+        intent.putExtra("url", fengmianUrl);
+        intent.putExtra("isEdit", true);
+        startActivity(intent);
     }
 
     private void clickBianHao() {
@@ -392,7 +416,7 @@ public class ShangpinAddActivity extends BaseActivity {
 
             }
         });
-        dialog.setTextInput(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL|InputType.TYPE_CLASS_TEXT);
+        dialog.setTextInput(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_CLASS_TEXT);
         dialog.setTextTitle("请设置编号");
         dialog.setTextContent(tv_anzhuangfei.getText().toString());
         dialog.show();
@@ -545,10 +569,10 @@ public class ShangpinAddActivity extends BaseActivity {
             return;
         }
 
-//        if (TextUtils.isEmpty(textChandi)) {
-//            Y.t("请选择产地");
-//            return;
-//        }
+        if (TextUtils.isEmpty(fengmianUrl)) {
+            Y.t("请上传封面图片");
+            return;
+        }
 
         Map<String, String> map = new HashMap<>();
         map.put("code", Urls.code_04179);
@@ -561,6 +585,7 @@ public class ShangpinAddActivity extends BaseActivity {
         map.put("shop_money_now", wares_money_go);//运费变成价格
         map.put("wares_number", bianHao);//编号
         map.put("wares_count", kuCun);//库存
+        map.put("wares_photo_url", fengmianUrl);//图片
 
         Gson gson = new Gson();
         OkGo.<AppResponse<ShangpinDetailsModel.DataBean>>post(Urls.WORKER)

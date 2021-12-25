@@ -281,9 +281,9 @@ public class BottomDingDanFragment extends BaseFragment {
                                 tishiDialog.show();
 
                             } else if (shop_pay_check.equals("6")) {//去评价
-                                OrderPingjiaActivity.actionStart(getContext(), shop_form_id);
+//                                OrderPingjiaActivity.actionStart(getContext(), shop_form_id);
                             } else if (shop_pay_check.equals("7")) {//查看详情
-                                OrderPingjiaActivity.actionStart(getContext(), shop_form_id);
+//                                OrderPingjiaActivity.actionStart(getContext(), shop_form_id);
                             } else if (shop_pay_check.equals("8")) {//退款审核
                                 showBottom(shop_form_id);
                             }

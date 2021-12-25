@@ -123,7 +123,7 @@ public class BottomBarTab extends FrameLayout {
         super.setSelected(selected);
         if (selected) {
             if (select_flag) {
-                mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.red));
+                mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.waimai_main_color));
             } else {
                 if (!title_flag) {
                     int size = 0;
@@ -138,7 +138,7 @@ public class BottomBarTab extends FrameLayout {
                     mTvTitle.setVisibility(VISIBLE);
                 }
             }
-            mTvTitle.setTextColor(ContextCompat.getColor(mContext, R.color.FC0100));
+            mTvTitle.setTextColor(ContextCompat.getColor(mContext, R.color.waimai_main_color));
         } else {
             if (select_flag) {
                 mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tab_unselect));

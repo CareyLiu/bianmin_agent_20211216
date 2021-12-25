@@ -47,7 +47,7 @@ public class SelectTabView extends LinearLayout {//选择的标题栏
 
     public void setSelect(boolean isSelect) {
         if (isSelect) {
-            tv_title.setTextColor(com.shendeng_bianmin.agent.util.Y.getColor(R.color.text_red));
+            tv_title.setTextColor(com.shendeng_bianmin.agent.util.Y.getColor(R.color.waimai_main_color));
             line.setVisibility(VISIBLE);
         } else {
             tv_title.setTextColor(com.shendeng_bianmin.agent.util.Y.getColor(R.color.text_color_6));

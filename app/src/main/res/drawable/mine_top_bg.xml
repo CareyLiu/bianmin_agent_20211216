@@ -3,8 +3,8 @@
     <!--实现应用背景颜色渐变-->
     <gradient
         android:angle="0"
-        android:endColor="#FC0708"
-        android:startColor="#FD5363" />
+        android:endColor="@color/waimai_main_color"
+        android:startColor="@color/waimai_main_color" />
 
     <!--    <gradient-->
     <!--        android:angle="90"-->
