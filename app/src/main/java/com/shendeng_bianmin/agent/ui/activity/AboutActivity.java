@@ -67,7 +67,7 @@ public class AboutActivity extends BaseActivity {
         String versionName = "";
         try {
             PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo("com.shendeng.agent", 0);
+            PackageInfo packageInfo = packageManager.getPackageInfo("com.shendeng_bianmin.agent", 0);
             versionName = packageInfo.versionName;
             if (TextUtils.isEmpty(versionName)) {
                 return "";

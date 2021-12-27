@@ -425,7 +425,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.shendeng.agent"
+                    android:host="com.shendeng_bianmin.agent"
                     android:pathPrefix="/conversation/"
                     android:scheme="rong" />
             </intent-filter>
@@ -440,7 +440,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.shendeng.agent"
+                    android:host="com.shendeng_bianmin.agent"
                     android:pathPrefix="/conversationlist"
                     android:scheme="rong" />
             </intent-filter>
