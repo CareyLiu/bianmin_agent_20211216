@@ -1,22 +1,17 @@
 package com.shendeng_bianmin.agent.util;
 
 public class Urls {
-     // public static String SERVER_URL = "https://shop.hljsdkj.com/";//基本地址
-    //public static String SERVER_URL = "https://test.hljsdkj.com/";//基本地址
-    // public static String SERVER_URL = "https://ggw.hljsdkj.com/";//ggw
-    //public static String SERVER_URL = "https://mqrn.hljsdkj.com/";//测试地址
+//    public static String SERVER_URL = "https://shop.hljsdkj.com/";//基本地址
     public static String SERVER_URL = "https://mqrn.hljsdkj.com/";//储物柜
-    //  public static String SERVER_URL = "http://192.168.0.26:8080/";//大个本地
+
     public static String KEY = "20180305124455yu";//全局请求key
-
-
     public static String APP = SERVER_URL + "shop_new/app/";//APP端
     public static String USER = APP + "user/";//APP端user
     public static String WORKER = APP + "worker/";//卖家端
     public static String UPLOAD = WORKER + "upload/";//卖家端上传
     public static String LOGIN = WORKER + "login";//卖家端登录接口
     public static String MSG = SERVER_URL + "msg";//发送短信验证接口
-    public static String USER_UPLOAD = USER+"uploads";
+    public static String USER_UPLOAD = USER + "uploads";
 
     public final static String code_00001 = "00001";//发送验证码
     public final static String code_04310 = "04310";//登录接口
