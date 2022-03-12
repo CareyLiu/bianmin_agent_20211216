@@ -22,6 +22,7 @@ public class ShangpinAdapter extends BaseQuickAdapter<ShangpinModel.DataBean, Ba
 
     @Override
     protected void convert(BaseViewHolder helper, ShangpinModel.DataBean item) {
+        helper.addOnClickListener(R.id.ll_contrain);
         Glide.with(mContext).load(item.getWares_photo_url()).error(R.mipmap.nopic_preview_shop).into((ImageView) helper.getView(R.id.iv_img));
         helper.setText(R.id.tv_title_name, item.getShop_product_title());
         String money = item.getMoney();

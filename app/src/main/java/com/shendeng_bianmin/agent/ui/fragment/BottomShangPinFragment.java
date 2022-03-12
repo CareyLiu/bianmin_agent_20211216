@@ -27,6 +27,7 @@ import com.shendeng_bianmin.agent.callback.JsonCallback;
 import com.shendeng_bianmin.agent.config.AppResponse;
 import com.shendeng_bianmin.agent.config.UserManager;
 import com.shendeng_bianmin.agent.model.ShangpinModel;
+import com.shendeng_bianmin.agent.ui.activity.Custom5SearchActivity;
 import com.shendeng_bianmin.agent.ui.activity.ShangpinAddActivity;
 import com.shendeng_bianmin.agent.ui.activity.ShangpinDetailsActivity;
 import com.shendeng_bianmin.agent.util.Urls;
@@ -41,6 +42,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -208,7 +210,7 @@ public class BottomShangPinFragment extends BaseFragment {
         return true;
     }
 
-    @OnClick({R.id.title_chushou, R.id.title_yixiajia, R.id.ll_paixu_time, R.id.ll_paixu_xiaoliang, R.id.iv_add})
+    @OnClick({R.id.title_chushou, R.id.title_yixiajia, R.id.ll_paixu_time, R.id.ll_paixu_xiaoliang, R.id.iv_add, R.id.ll_search})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.title_chushou:
@@ -225,6 +227,11 @@ public class BottomShangPinFragment extends BaseFragment {
                 break;
             case R.id.iv_add:
                 ShangpinAddActivity.actionStart(getContext());
+                break;
+
+            case R.id.ll_search:
+                Custom5SearchActivity.actionStart(getActivity());
+
                 break;
         }
     }
@@ -299,7 +306,7 @@ public class BottomShangPinFragment extends BaseFragment {
                         if (shangpinModels != null && shangpinModels.size() > 0) {
                             wares_id = shangpinModels.get(shangpinModels.size() - 1).getWares_id();
                             ll_no_data.setVisibility(View.GONE);
-                        }else {
+                        } else {
                             ll_no_data.setVisibility(View.VISIBLE);
                         }
 
@@ -337,7 +344,7 @@ public class BottomShangPinFragment extends BaseFragment {
                         if (shangpinModels != null && shangpinModels.size() > 0) {
                             wares_id = shangpinModels.get(shangpinModels.size() - 1).getWares_id();
                             ll_no_data.setVisibility(View.GONE);
-                        }else {
+                        } else {
                             ll_no_data.setVisibility(View.VISIBLE);
                         }
 
